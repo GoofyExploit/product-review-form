@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Condensed", serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 700px;
+    background-color: #f2f2f2;
+    height: 2300px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.form .banner {
+    height: 300px;
+    width: 700px;
+}
+
+.main h1 {
+    position: relative;
+    left: 70px;
+    margin-top: 30px;
+}
+
+.main h3 {
+    margin-top: 30px;
+    position: relative;
+    left: 70px;
+}
+
+.rating-box1 {
+    position: relative;
+    padding: 25px 50px 35px;
+    left: 15px;
+    margin-top: 20px;
+}
+
+.rating-box1 .stars {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.rating-box2 {
+    position: relative;
+    padding: 25px 50px 35px;
+    left: 15px;
+    margin-top: 20px;
+}
+
+.rating-box2 .stars {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.stars i {
+    color: #c1c1c1;
+    font-size: 35px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.stars i.active {
+    color: #ff9c1a;
+}
+
+.main p {
+    position: relative;
+    left: 70px;
+    margin-top: 30px;
+}
+
+.inp1 {
+    position: relative;
+    left: 70px;
+    width: 550px;
+    height: 30px;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.inp1::placeholder {
+    position: relative;
+    left: 10px;
+}
+
+.inp2 {
+    position: relative;
+    left: 70px;
+    width: 550px;
+    height: 80px;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.inp2::placeholder {
+    position: relative;
+    left: 10px;
+    bottom: 20px;
+}
+
+.inp3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: relative;
+    left: 70px;
+}
+.inp3 input{
+    padding-left: 10px;
+}
+
+.drag-area {
+    border: 2px dashed #ff8402;
+    height: 320px;
+    width: 550px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    left: 70px;
+    margin-top: 30px;
+}
+
+.drag-area.active {
+    border: 2px solid #66fa03;
+}
+
+.drag-area .icon {
+    font-size: 100px;
+    margin-top: 5px;
+    color: #ff8402;
+}
+
+.drag-area header {
+    font-size: 30px;
+    font-weight: 500;
+    color: #ff8402;
+}
+
+.drag-area span {
+    font-size: 25px;
+    font-weight: 500;
+    color: #0c0c0c;
+    margin: 10px 0 15px 0;
+}
+
+.drag-area button {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #ff8402;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drag-area img {
+    height: 50%;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.info {
+    color: #c1c1c1;
+}
+
+h2 {
+    position: relative;
+    left: 70px;
+    margin-top: 30px;
+}
+
+.submit button{
+    margin-top: 30px;
+    position: relative;
+    left: 70px;
+    border-radius: 10px;
+    border: none;
+    height: 60px;
+    width: 100px;
+    background-color: #ff8402;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+}
+
+.email input::placeholder{
+    position: relative;
+    left: 10px;
+}
