@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Reviews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="reviews.css">
+    <style>
+        .stars i {
+            color: lightgray; /* Default color for unselected stars */
+            font-size: 24px; /* Adjust size as needed */
+        }
+                .stars i.filled {
+            color: gold; /* Color for filled stars */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="display: inline; height: 100px; position: relative; left: 600px;">Product Reviews</h1>
+    <img src="./images/review.jpg" alt="">
+    <div id="reviews"></div>
+
+    <script>
+        async function fetchReviews() {
+            const response = await fetch('http://localhost:4000/reviews');
+            const reviews = await response.json();
+            const reviewsContainer = document.getElementById('reviews');
+            reviewsContainer.innerHTML = '';
+
+            reviews.forEach(review => {
+                const reviewDiv = document.createElement('div');
+                reviewDiv.innerHTML = `
+                    <h3>${review.username}</h3>
+                    <p>Email: ${review.email}</p>
+                    <p>Rating: <span class="stars">${renderStars(review.rating)}</span></p> 
+                    <p>Review Summary: ${review.reviewSummary}</p>
+                    <p>Review Detail: ${review.reviewDetail}</p>
+                    
+                    
+                `;
+                reviewsContainer.appendChild(reviewDiv);
+            });
+        }
+
+        
+        function renderStars(rating) {
+            let stars = ''; 
+            for (let i = 1; i <= 5; i++) { 
+                if (i <= rating) {
+                    stars += '<i class="fa-solid fa-star filled"></i>';
+                } else {
+                    stars += '<i class="fa-regular fa-star"></i>';
+                }
+            }
+            return stars; 
+        }
+        
+
+
+        fetchReviews();
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body{
+    padding-top: 30px;
+    margin-top: -240px;
+}
+#reviews {
+    position: relative;
+    left: 500px;
+    margin-top: 20px;
+    width: 400px;
+    background-color: antiquewhite;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+img{
+    position: relative;
+    height: 300px;
+    right: 300px;
+    top: 500px;
+    display: inline;
+}
